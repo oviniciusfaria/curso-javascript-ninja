@@ -22,8 +22,8 @@ Crie uma função que adicione um valor à variável criada acima, e retorne a s
     O valor da variável agora é VALOR.
 Onde VALOR é o novo valor da variável.
 */
-function add(valor){
-  variable = valor;
+function add(){
+  variable = 25;
   return "O valor da variável agora é: " + variable;
 }
 
@@ -41,7 +41,7 @@ Crie uma função com as seguintes características:
 3. O retorno da função deve ser a multiplicação dos 3 argumentos, somando `2` ao resultado da multiplicação.
 */
 function any(a, b, c){
-  if(a == undefined || b == undefined || c == undefined){
+  if(a === undefined || b === undefined || c === undefined){
     return 'Preencha todos os valores corretamente!'
   }else{
     return (a + b + c) + 2
@@ -76,7 +76,7 @@ function any (a,b,c){
     return arguments[0] + arguments[1];
   }else if(arguments.length == 3) {
     return (arguments[0] + arguments[1]) / arguments[2];
-  }else{
+  }else if(arguments.length == 0){
     return false;
   }
   return null;
