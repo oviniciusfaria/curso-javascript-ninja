@@ -134,9 +134,9 @@ pessoa.idade // 'Olá, eu tenho 31 anos!'
 Agora, faça a `pessoa` caminhar alguns metros, invocando o método `andar` 3x,
 com metragens diferentes passadas por parâmetro.
 */
-pessoa.andar(5);
-pessoa.andar(5);
-pessoa.andar(5);
+pessoa.andar(100);
+pessoa.andar(200);
+pessoa.andar(50);
 
 /*
 A pessoa ainda está andando? (Use a instrução para responder e comentários
@@ -159,7 +159,7 @@ pessoa.andando; //false
 Quantos metros a pessoa andou? (Use uma instrução para responder e comentários
 inline ao lado da instrução para mostrar a resposta retornada)
 */
-pessoa.caminhouQuantosMetros; //15
+pessoa.caminhouQuantosMetros; //350
 
 /*
 Agora vamos deixar a brincadeira um pouco mais divertida! :D
@@ -179,7 +179,20 @@ método), que será concatenada com a frase de retorno, mostrando a resposta
 correta, de acordo com os dados inseridos no objeto.
 */
 pessoa.apresentacao = function(){
-  return "Olá, eu sou o " +pessoa.nomeCompleto+ ", tenho "+pessoa.idade+" anos, "pessoa.altura", meu peso é "+pessoa.peso+" e, só hoje, eu já caminhei "+pessoa.caminhouQuantosMetros+" metros!";
+  var sexo = 'o';
+  var idadeAnos = 'anos';
+  var metrosCaminhados = 'metros';
+  
+  if(pessoa.sexo === 'Feminino')
+    sexo = 'a';
+    
+  if(pessoa.idade === 1)
+    idadeAnos = 'ano';
+    
+  if(pessoa.caminhouQuantosMetros === 1)
+    metrosCaminhados = 'metro';
+    
+  return 'Olá, eu sou ' + sexo + ' ' + pessoa.nome + ', tenho ' + pessoa.idade +' '+ idadeAnos +', ' + pessoa.altura + ', meu peso é ' + pessoa.peso + 'kg e, só hoje, eu já caminhei ' + pessoa.caminhouQuantosMetros +' '+ metrosCaminhados;
 }
 
 // Agora, apresente-se ;)
