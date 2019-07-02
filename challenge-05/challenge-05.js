@@ -11,8 +11,6 @@ function myFunc(arr){
   return arr;
 }
   
-}
-
 /*
 Imprima o segundo índice do array retornado pela função criada acima.
 */
