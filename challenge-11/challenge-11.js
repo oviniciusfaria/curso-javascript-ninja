@@ -1,3 +1,4 @@
+(function(){
 // Envolva todo o código desse arquivo em uma IIFE (incluindo esse comentário).
 
 /*
@@ -20,7 +21,8 @@ para o nome, idade, peso e data de nascimento dessa pessoa.
 var person = {
   name: 'Vini',
   age: 28,
-  weight: 80
+  weight: 80,
+  birthday: 16/07
 };
 
 /*
@@ -32,10 +34,13 @@ esse objeto tem.
 Após o loop, mostre a frase:
 'The person has [COUNTER] properties'
 */
+var counter = 0
 for(prop in person){
   console.log('The '+prop+' of person is ' + person[prop]);
+  counter++;
 }
-
+console.log('The person has '+counter+' properties');
+  
 /*
 Crie uma função chamada `moreThan`, que vai verificar se a pessoa (objeto
 criado acima) é mais velha que a idade passada por parâmetro.
@@ -44,7 +49,7 @@ Após a função, mostrar a mensagem no console:
 'The person has more than 25 years old? [TRUE/FALSE]'
 */
 function moreThan(age){
-  return 'The person has more than 25 years old? ' + (person.age > age);
+  return 'The person has more than '+age+' years old? ' + (person.age > age);
 }
 
 /*
@@ -55,7 +60,7 @@ Mostre no console os números no array.
 console.log( 'De 0 a 10:' );
 
 var numbers = [];
-for(var i = 0; i <= 20; i++ ){
+for(var i = 0; i < 20; i++ ){
   numbers.push(i);
   if(i > 10) break;
 }
@@ -71,8 +76,10 @@ numbers = [];
 
 console.log( 'Pares de 0 a 20:' );
 for(var i = 0; i <= 20; i++){
-  if(i%2===0) numbers.push(i);
-  continue;
+  if(i%2!==0) continue;
+  numbers.push(i);
 }
 
 console.log(numbers);
+  
+})()
