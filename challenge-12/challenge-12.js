@@ -12,17 +12,18 @@ Preencha cada propriedade com os seus dados pessoais, respeitando o tipo
 de valor para cada propriedade.
 */
 var person = {
-  'name' : 'Vini',
-  'lastname' : 'Faria',
-  'age' : 28
+  name : 'Vini',
+  lastname : 'Faria',
+  age : 28
 }
+
 console.log( 'Propriedades de "person": ');
 
 /*
 Mostre no console, em um array, todas as propriedades do objeto acima.
 Não use nenhuma estrutura de repetição, nem crie o array manualmente.
 */
-console.log(Object.values(person))
+console.log(Object.keys(person))
 
 /*
 Crie um array vazio chamado `books`.
@@ -94,6 +95,12 @@ no formato abaixo:
 for(var b in books){
   console.log(Object.keys(books[b])[0] + ' : ' + books[b].name);
   console.log(Object.keys(books[b])[1] + ' : ' + books[b].pages);
+}
+
+for(var i = 0; i < books.length; i++ ){
+  for(var prop in books[i]){
+    console.log(prop + ' : ' + books[i][prop]);
+  }
 }
 
 /*
